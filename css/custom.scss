@@ -59,7 +59,6 @@ body {
 
     #container {
       text-align: center;
-      width: 960px;
       margin: 30px auto;
       margin-bottom: 100px !important;
       font-family: 'Raleway', sans-serif;
@@ -73,13 +72,11 @@ body {
       }
     }
 
-    .forms {
+    form {
       input, textarea, a {
-        width: 100%;
         font-family: 'Open Sans', sans-serif;
         font-weight: 300;
         font-size: 18px;
-        padding: 5px;
         @include br(5px);
         border: 1px solid #ccc;
         outline: none;
@@ -87,9 +84,14 @@ body {
           box-shadow: 0 0 8px #ccc;
         }
       }
-      a {
-        padding: 15px;
+      input[type=submit] {
+        font-family: "passion-one", sans-serif;
+        font-size: 25px;
       }
+    }
+
+    textarea {
+      resize: none;
     }
 
 /*-----  End of CONTAINER  ------*/
