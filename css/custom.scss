@@ -57,11 +57,10 @@ body {
 =            CONTAINER            =
 =================================*/
 
-    #container {
+    section {
       text-align: center;
       margin: 30px auto;
-      margin-bottom: 100px !important;
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-weight: 300;
       font-size: 18px;
       h2 {
@@ -69,6 +68,9 @@ body {
         font-weight: 200;
         font-size: bold;
         margin: 30px;
+      }
+      &:last {
+        margin-bottom: 100px !important;
       }
     }
 
