@@ -2,6 +2,8 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:200);
 @import url(http://fonts.googleapis.com/css?family=Merriweather:300);
 
+$border-icons: #007095;
+
 @mixin br($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -104,6 +106,56 @@ body {
     #informacion p {
       text-align: justify;
       font-family: "Merriweather", Georgia, "Times New Roman", serif;
+      font-weight: 300;
+    }
+
+    .pregunta {
+      margin: 0 auto;
+      width: 200px;
+      height: 200px;
+      @include br(100px);
+      border: 5px solid $border-icons;
+      position: relative;
+      &::before {
+        content: "";
+        background: url('../img/torre-mapfre.jpg');
+        opacity: 0.55;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+        @include br(100px);
+      }
+      i {
+        color: $border-icons;
+        font-size: 6.5em;
+      }
+    }
+
+    .absolute-center {
+
+      /* Internet Explorer 10 */
+      display:-ms-flexbox;
+      -ms-flex-pack:center;
+      -ms-flex-align:center;
+
+      /* Firefox */
+      display:-moz-box;
+      -moz-box-pack:center;
+      -moz-box-align:center;
+
+      /* Safari, Opera, and Chrome */
+      display:-webkit-box;
+      -webkit-box-pack:center;
+      -webkit-box-align:center;
+
+      /* W3C */
+      display:box;
+      box-pack:center;
+      box-align:center;
+
     }
 
 /*-----  End of CONTAINER  ------*/
