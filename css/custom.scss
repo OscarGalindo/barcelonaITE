@@ -3,8 +3,10 @@
 @import url(http://fonts.googleapis.com/css?family=Merriweather:300);
 
 $border-icons    : #007095;
-$background-body : #2D3E50;
-$text-body       : #ccc;
+$background-body : #F3F3F3;
+$text-body       : #333;
+$text-header     : #FFF;
+$text-footer     : #FFF;
 
 @mixin br($radius) {
   -webkit-border-radius: $radius;
@@ -26,6 +28,7 @@ h1, h2, h3 {
     color: darken($text-body, 20%);
   }
 }
+
 /*==============================
 =            HEADER            =
 ==============================*/
@@ -51,7 +54,7 @@ h1, h2, h3 {
       text-align       : center;
       h1 {
         text-shadow : 0 0 15px #333;
-        color       : #ccc;
+        color       : $text-header;
         margin      : 0;
         font-family : 'Raleway', sans-serif;
         font-weight : 200;
@@ -101,7 +104,7 @@ h1, h2, h3 {
         }
       }
       input[type=submit] {
-        font-family : "passion-one", sans-serif;
+        font-family : "Open Sans", sans-serif;
         font-size   : 25px;
       }
     }
@@ -189,6 +192,7 @@ h1, h2, h3 {
         font-family : 'Open Sans', sans-serif;
         font-weight : 300;
         font-size   : 14px;
+        color       : $text-footer;
       }
     }
 
