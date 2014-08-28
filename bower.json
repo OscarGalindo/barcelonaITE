@@ -4,6 +4,7 @@
   "dependencies": {
     "jquery": "~1.10.2",
     "font-awesome": "latest",
+    "modernizr": "latest",
     "foundation": "latest",
     "onepage-scroll": "latest"
   }

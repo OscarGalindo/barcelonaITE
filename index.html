@@ -12,83 +12,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="vendor/foundation/css/foundation.css" />
-    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
-    <script src="vendor/foundation/js/vendor/modernizr.js"></script>
-
-    <script>
-    $(document).foundation();
-    </script>
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="vendor/onepage-scroll/onepage-scroll.css" />
     <link rel="stylesheet" href="css/custom.css">
-    <script src="//use.edgefonts.net/passion-one.js"></script>
-    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/onepage-scroll/jquery.onepage-scroll.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#main").onepage_scroll({
+           sectionContainer: "section",
+           easing: "ease",
+           animationTime: 1000,
+           pagination: true,
+           updateURL: false,
+           loop: true,
+           keyboard: true,
+           responsiveFallback: false,
+           direction: "vertical"
+        });
+      });
+    </script>
+    <script src="vendor/modernizr/modernizr.js"></script>
   </head>
   <body>
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <header id="logo"></header>
+    <div class="wrapper">
+      <div id="main">
+        <section id="start">
+          <header id="logo"></header>
 
-    <div id="header">
-      <h1>BARCELONA<span class="ite">ITE</span></h1>
+          <div id="header">
+            <h1>BARCELONA<span class="ite">ITE</span></h1>
+          </div>
+        </section>
+
+        <section id="formulario">
+          <div class="row" data-equalizer>
+            <h2>Solicite ahora mismo su ITE en Barcelona<br /><small>Sin compromisos, respuesta en <b>menos de 24 horas!</b></small></h2>
+
+            <form action="#" method="POST">
+              <div class="row">
+                <div class="large-4 columns">
+                  <label for="nombre">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
+                  </label>
+                </div>
+                <div class="large-4 columns">
+                  <label for="email">
+                    <input type="text" name="email" id="email" placeholder="Email" />
+                  </label>
+                </div>
+                <div class="large-4 columns">
+                  <label for="telefono">
+                    <input type="text" name="telefono" id="telefono" placeholder="Telefono" />
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="large-12 columns">
+                  <label for="observaciones">
+                    <textarea name="observaciones" id="observaciones" rows="10" placeholder="Todas sus dudas"></textarea>
+                  </label>
+                  <input class="button large large-12" type="submit" value="SOLICITAR PRESUPUESTO" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section id="informacion">
+          <div class="row" data-equalizer>
+            <div class="large-8 columns" data-equalizer-watch>
+              <h2>¿Qué es una ITE?</h2>
+              <p>La <b>Inspección Técnica de Edificaciones</b> o inspección técnica los edificios; más conocida por sus siglas ITE, es un control técnico al que deben someterse cada cierto tiempo los edificios en algunas ciudades españolas.<br /><br />
+              La ITE es un tipo de mantenimiento legal preventivo, por el cual se somete periódicamente a los edificios a la revisión de una serie de elementos que afectan a la seguridad del inmueble y de las personas que lo habitan. Las ITE vienen reguladas por el Real Decreto-ley 8/2011 de 1 de julio y por las distintas Ordenanzas Municipales, que determinan las condiciones para las inspecciones.</p>
+              <div class="fuente">
+                <small>Fuente: <a href="http://es.wikipedia.org/wiki/Inspecci%C3%B3n_T%C3%A9cnica_de_Edificaciones">wikipedia</a></small>
+              </div>
+            </div>
+            <div class="large-4 columns" data-equalizer-watch>
+              <div class="pregunta absolute-center">
+                <i class="fa fa-question fa-5x"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <h3><a href="#">Barcelona ITE</a> - Solicita presupuesto para la ITE de tu edificio.</h3>
+        </footer>
+
+      </div>
     </div>
 
-    <section id="formulario" class="row">
-      <h2>Solicite ahora mismo su ITE en Barcelona<br /><small>Sin compromisos, respuesta en <b>menos de 24 horas!</b></small></h2>
-
-      <form action="#" method="POST">
-        <div class="row">
-          <div class="large-4 columns">
-            <label for="nombre">
-              <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
-            </label>
-          </div>
-          <div class="large-4 columns">
-            <label for="email">
-              <input type="text" name="email" id="email" placeholder="Email" />
-            </label>
-          </div>
-          <div class="large-4 columns">
-            <label for="telefono">
-              <input type="text" name="telefono" id="telefono" placeholder="Telefono" />
-            </label>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="large-12 columns">
-            <label for="observaciones">
-              <textarea name="observaciones" id="observaciones" rows="10" placeholder="Todas sus dudas"></textarea>
-            </label>
-            <input class="button large large-12" type="submit" value="SOLICITAR PRESUPUESTO" />
-          </div>
-        </div>
-      </form>
-    </section>
-
-    <section id="informacion">
-      <div class="row" data-equalizer>
-        <div class="large-8 columns" data-equalizer-watch>
-          <h2>¿Qué es una ITE?</h2>
-          <p>La <b>Inspección Técnica de Edificaciones</b> o inspección técnica los edificios; más conocida por sus siglas ITE, es un control técnico al que deben someterse cada cierto tiempo los edificios en algunas ciudades españolas.<br /><br />
-          La ITE es un tipo de mantenimiento legal preventivo, por el cual se somete periódicamente a los edificios a la revisión de una serie de elementos que afectan a la seguridad del inmueble y de las personas que lo habitan. Las ITE vienen reguladas por el Real Decreto-ley 8/2011 de 1 de julio y por las distintas Ordenanzas Municipales, que determinan las condiciones para las inspecciones.</p>
-          <div class="fuente">
-            <small>Fuente: <a href="http://es.wikipedia.org/wiki/Inspecci%C3%B3n_T%C3%A9cnica_de_Edificaciones">wikipedia</a></small>
-          </div>
-        </div>
-        <div class="large-4 columns" data-equalizer-watch>
-          <div class="pregunta absolute-center">
-            <i class="fa fa-question fa-5x"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <h3><a href="#">Barcelona ITE</a> - Solicita presupuesto para la ITE de tu edificio.</h3>
-    </footer>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
     <script src="vendor/foundation/js/foundation/foundation.js"></script>
     <script src="vendor/foundation/js/foundation/foundation.equalizer.js"></script>
     <script src="js/main.js"></script>

@@ -29,6 +29,18 @@ h1, h2, h3 {
   }
 }
 
+.wrapper {
+  height: 100% !important;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+section  {
+  height: 100%;
+  margin-top: 0 !important;
+}
+
 /*==============================
 =            HEADER            =
 ==============================*/
@@ -37,9 +49,9 @@ h1, h2, h3 {
       background        : url('../img/bcn.jpg') 0 0 no-repeat fixed;
       box-shadow        : 0 4px 10px darken($background-body, 5%);
       color             : #fff;
-      height            : 300px;
-      margin            : 0;
-      padding           : 200px 0 260px 0;
+      height            : 100%;
+      margin: 0;
+      padding: 0;
       background-origin : border-box;
       background-size   : auto 100%;
     }
@@ -181,7 +193,7 @@ h1, h2, h3 {
 ==============================*/
 
     footer {
-      position         : relative;
+      position         : absolute;
       bottom           : 0;
       width            : 100%;
       height           : 50px;
