@@ -37,16 +37,16 @@ h1, h2, h3 {
 }
 
 .circle {
-  position         : relative;
-  width            : 100px;
-  height           : 100px;
-  bottom           : 200px;
-  margin           : 0 auto;
-  background-color : rgba(255,255,255,0.6);
-  color            : $background-footer;
+  position          : relative;
+  width             : 100px;
+  height            : 100px;
+  bottom            : 200px;
+  margin            : 0 auto;
+  background-color  : rgba(255,255,255,0.6);
+  color             : $background-footer;
+  -webkit-animation : bounce 2.0s infinite ease-in-out;
+  animation         : bounce 2.0s infinite ease-in-out;
   @include br(50px);
-  -webkit-animation: bounce 2.0s infinite ease-in-out;
-  animation: bounce 2.0s infinite ease-in-out;
 }
 
 @-webkit-keyframes bounce {
@@ -65,7 +65,7 @@ h1, h2, h3 {
 ==============================*/
 
     #logo {
-      background        : url('../img/bcn.jpg') 0 0 no-repeat fixed !important;
+      background        : url('../img/bcn2.jpg') 0 0 no-repeat fixed !important;
       box-shadow        : 0 4px 10px darken($background-body, 5%);
       color             : #fff;
       height            : 100%;
@@ -141,8 +141,8 @@ h1, h2, h3 {
     }
 
     #formulario {
-      background      : url('../img/bcn2.jpg') 0 0 no-repeat;
-      background-size : 100% auto;
+      background      : url('../img/bcn.jpg') 0 0 no-repeat;
+      background-size : auto 100%;
     }
 
     .fuente {
