@@ -5,7 +5,7 @@
 $border-icons      : #007095;
 $background-body   : #F3F3F3;
 $background-footer : #363839;
-$text-body         : #FFF;
+$text-body         : #363839;
 $text-header       : #FFF;
 $text-footer       : #FFF;
 
@@ -35,14 +35,40 @@ h1, h2, h3 {
   margin   : 0 auto;
   overflow : hidden;
 }
+.scroll {
+  position : absolute;
+  bottom   : 100px;
+  left     : 0;
+  right    : 0;
+}
+#contactbutton {
+  text-align : center;
+  width      : 50%;
+  margin     : 0 auto;
+}
+#contactbutton h2 {
+  position           : relative;
+  bottom             : 0px;
+  padding            : 20px 10px;
+  background-color   : #639DBC;
+  cursor             : pointer;
+  -webkit-box-shadow : 2px 2px 0px 0px rgba(50, 50, 48, 0.75);
+  -moz-box-shadow    : 2px 2px 0px 0px rgba(50, 50, 48, 0.75);
+  box-shadow         : 2px 2px 0px 0px rgba(50, 50, 48, 0.75);
+  &:active {
+    top                : 2px;
+    left               : 2px;
+    outline            : none;
+    -webkit-box-shadow : none;
+    box-shadow         : none;
+  }
+}
 
-.circle {
-  position          : relative;
+.arrow {
+  margin            : 0 auto;
   width             : 100px;
   height            : 100px;
-  bottom            : 200px;
-  margin            : 0 auto;
-  background-color  : rgba(255,255,255,0.6);
+  background-color  : rgba(255, 255, 255, 0.6);
   color             : $background-footer;
   -webkit-animation : bounce 2.0s infinite ease-in-out;
   animation         : bounce 2.0s infinite ease-in-out;

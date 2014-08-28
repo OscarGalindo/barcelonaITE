@@ -23,6 +23,13 @@
 
     <script type="text/javascript">
       $(document).ready(function(){
+        $(".scroll").on('click', function() {
+          $("#main").moveDown();
+        });
+        $('#contactbutton').on('click', function() {
+          $("#main").moveTo(2);
+        });
+
         $("#main").onepage_scroll({
            sectionContainer: "section",
            easing: "ease",
@@ -51,7 +58,7 @@
           <div id="header">
             <h1>BARCELONA<span class="ite">ITE</span></h1>
           </div>
-          <div class="circle"><span class="arrow"></span></div>
+          <div class="scroll"><div class="arrow"></div></div>
         </section>
 
         <section id="formulario">
@@ -87,6 +94,7 @@
               </div>
             </form>
           </div>
+          <div class="scroll"><div class="arrow"></div></div>
         </section>
 
         <section id="informacion">
@@ -105,6 +113,9 @@
               </div>
             </div>
           </div>
+          <div id="contactbutton">
+            <h2>Contacta con nosotros ahora mismo!</h2>
+          </div>
         </section>
 
         <footer>
@@ -114,8 +125,6 @@
       </div>
     </div>
 
-    <script src="vendor/foundation/js/foundation/foundation.js"></script>
-    <script src="vendor/foundation/js/foundation/foundation.equalizer.js"></script>
     <script src="js/main.js"></script>
 
     <script>
