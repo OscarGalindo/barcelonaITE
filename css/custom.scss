@@ -2,11 +2,12 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:200);
 @import url(http://fonts.googleapis.com/css?family=Merriweather:300);
 
-$border-icons    : #007095;
-$background-body : #F3F3F3;
-$text-body       : #333;
-$text-header     : #FFF;
-$text-footer     : #FFF;
+$border-icons      : #007095;
+$background-body   : #F3F3F3;
+$background-footer : #363839;
+$text-body         : #FFF;
+$text-header       : #FFF;
+$text-footer       : #FFF;
 
 @mixin br($radius) {
   -webkit-border-radius: $radius;
@@ -16,10 +17,9 @@ $text-footer     : #FFF;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  background-color: $background-body;
-  color: $text-body;
+  font-family : 'Open Sans', sans-serif;
+  font-weight : 300;
+  color       : $text-body;
 }
 
 h1, h2, h3 {
@@ -30,15 +30,34 @@ h1, h2, h3 {
 }
 
 .wrapper {
-  height: 100% !important;
-  height: 100%;
-  margin: 0 auto;
-  overflow: hidden;
+  height   : 100%;
+  height   : 100%;
+  margin   : 0 auto;
+  overflow : hidden;
 }
 
-section  {
-  height: 100%;
-  margin-top: 0 !important;
+.circle {
+  position         : relative;
+  width            : 100px;
+  height           : 100px;
+  bottom           : 200px;
+  margin           : 0 auto;
+  background-color : rgba(255,255,255,0.6);
+  color            : $background-footer;
+  @include br(50px);
+  -webkit-animation: bounce 2.0s infinite ease-in-out;
+  animation: bounce 2.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% { -webkit-transform: scale(0.7) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+.arrow:before {
+  content     : "\f103";
+  font-family : FontAwesome;
+  font-size   : 72px;
 }
 
 /*==============================
@@ -46,13 +65,10 @@ section  {
 ==============================*/
 
     #logo {
-      background        : url('../img/bcn.jpg') 0 0 no-repeat fixed;
+      background        : url('../img/bcn.jpg') 0 0 no-repeat fixed !important;
       box-shadow        : 0 4px 10px darken($background-body, 5%);
       color             : #fff;
       height            : 100%;
-      margin: 0;
-      padding: 0;
-      background-origin : border-box;
       background-size   : auto 100%;
     }
 
@@ -92,14 +108,13 @@ section  {
       font-family : 'Open Sans', sans-serif;
       font-weight : 300;
       font-size   : 18px;
+      height      : 100%;
+      margin-top  : 0 !important;
       h2 {
         font-family : 'Raleway', sans-serif;
         font-weight : 200;
         font-size   : bold;
         margin      : 30px;
-      }
-      &:last {
-        margin-bottom: 100px !important;
       }
     }
 
@@ -123,6 +138,11 @@ section  {
 
     textarea {
       resize: none;
+    }
+
+    #formulario {
+      background      : url('../img/bcn2.jpg') 0 0 no-repeat;
+      background-size : 100% auto;
     }
 
     .fuente {
@@ -155,8 +175,8 @@ section  {
         @include br(100px);
       }
       i {
-        color: $border-icons;
-        font-size: 6.5em;
+        color     : $border-icons;
+        font-size : 6.5em;
       }
     }
 
@@ -197,14 +217,16 @@ section  {
       bottom           : 0;
       width            : 100%;
       height           : 50px;
-      background-color : #363839;
+      background-color : $background-footer;
+      display          : table;
       h3 {
-        padding-top : 17px;
-        text-align  : center;
-        font-family : 'Open Sans', sans-serif;
-        font-weight : 300;
-        font-size   : 14px;
-        color       : $text-footer;
+        display        : table-cell;
+        vertical-align : middle;
+        text-align     : center;
+        font-family    : 'Open Sans', sans-serif;
+        font-weight    : 300;
+        font-size      : 14px;
+        color          : $text-footer;
       }
     }
 
