@@ -1,0 +1,10 @@
+{
+  "name": "barcelonaITE",
+  "version": "0.1",
+  "dependencies": {
+    "jquery": "~1.10.2",
+    "font-awesome": "latest",
+    "foundation": "latest",
+    "onepage-scroll": "latest"
+  }
+}
