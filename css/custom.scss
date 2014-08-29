@@ -67,7 +67,8 @@ body {
       box-shadow        : 0 4px 10px darken($background-body, 5%);
       color             : #fff;
       height            : 100%;
-      background-size   : auto 100%;
+      background-size   : cover;
+      background-position: center center;
     }
 
     #header {
@@ -138,7 +139,8 @@ body {
 
     #formulario {
       background      : url('../img/bcn.jpg') 0 0 no-repeat;
-      background-size : auto 100%;
+      background-size : cover;
+      background-position: center center;
       header {
         margin: 20px auto;
         padding: 10px;
@@ -158,7 +160,8 @@ body {
 
     #informacion {
       background      : url('../img/bcn3.jpg') 0 0 no-repeat;
-      background-size : 100% auto;
+      background-size : cover;
+      background-position: center center;
       display: table;
       height: 100%;
     }
