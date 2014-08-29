@@ -22,13 +22,6 @@ body {
   color       : $text-body;
 }
 
-h1, h2, h3 {
-  color: $text-body;
-  small {
-    color: darken($text-body, 20%);
-  }
-}
-
 .wrapper {
   height   : 100%;
   height   : 100%;
@@ -41,30 +34,9 @@ h1, h2, h3 {
   left     : 0;
   right    : 0;
 }
-#contactbutton {
-  text-align : center;
-  width      : 50%;
-  margin     : 0 auto;
-}
-#contactbutton h2 {
-  position           : relative;
-  bottom             : 0px;
-  padding            : 20px 10px;
-  background-color   : #639DBC;
-  cursor             : pointer;
-  -webkit-box-shadow : 2px 2px 0px 0px rgba(50, 50, 48, 0.75);
-  -moz-box-shadow    : 2px 2px 0px 0px rgba(50, 50, 48, 0.75);
-  box-shadow         : 2px 2px 0px 0px rgba(50, 50, 48, 0.75);
-  &:active {
-    top                : 2px;
-    left               : 2px;
-    outline            : none;
-    -webkit-box-shadow : none;
-    box-shadow         : none;
-  }
-}
 
 .arrow {
+  cursor   : pointer;
   margin            : 0 auto;
   width             : 100px;
   height            : 100px;
@@ -137,9 +109,7 @@ h1, h2, h3 {
       height      : 100%;
       margin-top  : 0 !important;
       h2 {
-        font-family : 'Raleway', sans-serif;
-        font-weight : 200;
-        font-size   : bold;
+        font-family : 'Open Sans', sans-serif;
         margin      : 30px;
       }
     }
@@ -169,66 +139,63 @@ h1, h2, h3 {
     #formulario {
       background      : url('../img/bcn.jpg') 0 0 no-repeat;
       background-size : auto 100%;
-    }
-
-    .fuente {
-      float: right;
-    }
-
-    #informacion p {
-      text-align  : justify;
-      font-family : "Merriweather", Georgia, "Times New Roman", serif;
-      font-weight : 300;
-    }
-
-    .pregunta {
-      @include br(100px);
-      margin   : 0 auto;
-      width    : 200px;
-      height   : 200px;
-      border   : 5px solid $border-icons;
-      position : relative;
-      &::before {
-        content    : "";
-        background : url('../img/torre-mapfre.jpg');
-        opacity    : 0.55;
-        top        : 0;
-        left       : 0;
-        bottom     : 0;
-        right      : 0;
-        position   : absolute;
-        z-index    : -1;
-        @include br(100px);
+      header {
+        margin: 20px auto;
+        padding: 10px;
+        background-color : rgba(0,0,0,0.4) !important;
+        width: 100%;
+        text-shadow : 0 0 10px #333;
       }
-      i {
-        color     : $border-icons;
-        font-size : 6.5em;
+      h2 {
+        font-size: 40px;
+        font-weight: 700;
+        color: $text-header;
+        small {
+          color: $text-header;
+        }
       }
     }
 
-    .absolute-center {
-
-      /* Internet Explorer 10 */
-      display:-ms-flexbox;
-      -ms-flex-pack:center;
-      -ms-flex-align:center;
-
-      /* Firefox */
-      display:-moz-box;
-      -moz-box-pack:center;
-      -moz-box-align:center;
-
-      /* Safari, Opera, and Chrome */
-      display:-webkit-box;
-      -webkit-box-pack:center;
-      -webkit-box-align:center;
-
-      /* W3C */
-      display:box;
-      box-pack:center;
-      box-align:center;
-
+    #informacion {
+      background      : url('../img/bcn3.jpg') 0 0 no-repeat;
+      background-size : 100% auto;
+      display: table;
+      height: 100%;
     }
+
+    .vertical-align {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .background-opacity {
+      margin: 20px auto;
+      padding: 50px;
+      background-color : rgba(0,0,0,0.6) !important;
+      color: $text-header;
+      p {
+        text-align  : justify;
+        font-family : "Open Sans", sans-serif;
+        font-weight : 200;
+      }
+    }
+
+    #botton_contacta {
+      padding            : 15px 25px;
+      background-color   : #639DBC;
+      cursor             : pointer;
+      -webkit-box-shadow : 2px 2px 0px 0px rgba(50, 50, 48, 0.75);
+      -moz-box-shadow    : 2px 2px 0px 0px rgba(50, 50, 48, 0.75);
+      box-shadow         : 2px 2px 0px 0px rgba(50, 50, 48, 0.75);
+      &:active {
+        top                : 2px;
+        left               : 2px;
+        outline            : none;
+        -webkit-box-shadow : none;
+        box-shadow         : none;
+      }
+    }
+
 
 /*-----  End of CONTAINER  ------*/
 
